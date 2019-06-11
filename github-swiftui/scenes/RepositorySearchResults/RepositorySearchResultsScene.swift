@@ -8,16 +8,18 @@
 
 import SwiftUI
 
-struct RepositorySearchResultsScene : View {
+struct RepositorySearchResultsScene: View {
   
-  @State var repositories: [Repository] = []
+//  @State var repositories: [Repository] = []
   
   var body: some View {
     NavigationView {
       List(repositories) { repository in
-        RepositoryRow(repository: repository)
-        }.navigationBarTitle(Text("Search"),
-                             displayMode: .inline)
+        NavigationButton(destination: RepositoryDetailScene(repository: repository)) {
+          RepositoryRow(repository: repository)
+        }
+      }.navigationBarTitle(Text("Search"),
+                           displayMode: .inline)
     }
   }
 }
@@ -26,17 +28,8 @@ extension Repository: Identifiable {}
 
 #if DEBUG
 struct RepositorySearchResultsScene_Previews : PreviewProvider {
-    static var previews: some View {
-        RepositorySearchResultsScene(repositories: [
-          Repository(id: Repository.ID(rawValue: 1),
-                     name: "hicka04",
-                     fullName: "hicka04/github-swiftui",
-                     description: nil,
-                     stargazersCount: 0,
-                     updatedAt: .init(),
-                     owner: User(id: User.ID(rawValue: 1),
-                                 login: "hicka04"))
-          ])
-    }
+  static var previews: some View {
+    RepositorySearchResultsScene()
+  }
 }
 #endif

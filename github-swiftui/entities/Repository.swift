@@ -16,6 +16,7 @@ struct Repository: Decodable {
   let description: String?
   let stargazersCount: Int
   let updatedAt: Date
+  let htmlUrl: URL
   let owner: User
 }
 
@@ -25,3 +26,15 @@ extension Repository {
     let rawValue: Int
   }
 }
+
+let repositories: [Repository] = [
+  Repository(id: Repository.ID(rawValue: 1),
+             name: "hicka04",
+             fullName: "hicka04/github-swiftui",
+             description: nil,
+             stargazersCount: 0,
+             updatedAt: .init(),
+             htmlUrl: URL(string: "https://github.com/hicka04/github-swiftui")!,
+             owner: User(id: User.ID(rawValue: 1),
+                         login: "hicka04"))
+]

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RepositoryRow : View {
+struct RepositoryRow: View {
   
   let repository: Repository
   
@@ -26,15 +26,8 @@ struct RepositoryRow : View {
 
 #if DEBUG
 struct RepositoryRow_Previews : PreviewProvider {
-    static var previews: some View {
-      RepositoryRow(repository: Repository(id: Repository.ID(rawValue: 1),
-                                           name: "hicka04",
-                                           fullName: "hicka04/github-swiftui",
-                                           description: nil,
-                                           stargazersCount: 0,
-                                           updatedAt: .init(),
-                                           owner: User(id: User.ID(rawValue: 1),
-                                                       login: "hicka04")))
-    }
+  static var previews: some View {
+    RepositoryRow(repository: repositories[0])
+  }
 }
 #endif
