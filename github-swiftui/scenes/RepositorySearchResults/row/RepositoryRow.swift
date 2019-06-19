@@ -16,7 +16,7 @@ struct RepositoryRow: View {
     HStack {
       Text("\(repository.fullName)")
       Spacer()
-      Image(systemName: "heart")
+      Image(systemName: "bookmark")
       }.padding(EdgeInsets(top: 16,
                            leading: 0,
                            bottom: 16,
