@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B826DA9422B9E9B9002197FA /* BookmarksScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826DA9322B9E9B9002197FA /* BookmarksScene.swift */; };
+		B826DA9722B9EABB002197FA /* TabScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826DA9622B9EABB002197FA /* TabScene.swift */; };
 		B86012EB22AE974000256BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86012EA22AE974000256BBE /* AppDelegate.swift */; };
 		B86012ED22AE974000256BBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86012EC22AE974000256BBE /* SceneDelegate.swift */; };
 		B86012F122AE974100256BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86012F022AE974100256BBE /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B826DA9322B9E9B9002197FA /* BookmarksScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksScene.swift; sourceTree = "<group>"; };
+		B826DA9622B9EABB002197FA /* TabScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScene.swift; sourceTree = "<group>"; };
 		B86012E722AE974000256BBE /* github-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86012EA22AE974000256BBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B86012EC22AE974000256BBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B826DA9222B9E995002197FA /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				B826DA9322B9E9B9002197FA /* BookmarksScene.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		B826DA9522B9EAA7002197FA /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B826DA9622B9EABB002197FA /* TabScene.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		B86012DE22AE974000256BBE = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				B86012EC22AE974000256BBE /* SceneDelegate.swift */,
+				B826DA9522B9EAA7002197FA /* Tab */,
 				B860130C22AEA98B00256BBE /* RepositorySearchResults */,
+				B826DA9222B9E995002197FA /* Bookmarks */,
 				B8E66E3022AF5BB500DF8EB5 /* RepositoryDetail */,
 			);
 			path = scenes;
@@ -223,7 +245,9 @@
 				B86012ED22AE974000256BBE /* SceneDelegate.swift in Sources */,
 				B860130E22AEA9B000256BBE /* RepositorySearchResultsScene.swift in Sources */,
 				B860131422AEAA2C00256BBE /* Repository.swift in Sources */,
+				B826DA9422B9E9B9002197FA /* BookmarksScene.swift in Sources */,
 				B8E66E3222AF5BD400DF8EB5 /* RepositoryDetailScene.swift in Sources */,
+				B826DA9722B9EABB002197FA /* TabScene.swift in Sources */,
 				B860131622AEAA4200256BBE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
