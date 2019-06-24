@@ -10,11 +10,11 @@ import SwiftUI
 
 struct RepositorySearchResultsScene: View {
   
-//  @State var repositories: [Repository] = []
+  @EnvironmentObject var repositoryModel: RepositoryModel
   
   var body: some View {
     NavigationView {
-      List(repositories) { repository in
+      List(repositoryModel.repositories) { repository in
         NavigationButton(destination: RepositoryDetailScene(repository: repository)) {
           RepositoryRow(repository: repository)
         }
@@ -30,6 +30,7 @@ extension Repository: Identifiable {}
 struct RepositorySearchResultsScene_Previews : PreviewProvider {
   static var previews: some View {
     RepositorySearchResultsScene()
+      .environmentObject(RepositoryModel())
   }
 }
 #endif

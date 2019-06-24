@@ -15,6 +15,7 @@ struct TabScene : View {
   var body: some View {
     TabbedView(selection: $selectedIndex) {
       RepositorySearchResultsScene()
+        .environmentObject(RepositoryModel())
         .tabItemLabel(Text("Search"))
         .tag(0)
       BookmarksScene()
