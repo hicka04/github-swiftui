@@ -15,7 +15,7 @@ struct RepositorySearchResultsScene: View {
   var body: some View {
     NavigationView {
       List(repositoryModel.repositories) { repository in
-        NavigationButton(destination: RepositoryDetailScene(repository: repository)) {
+        NavigationLink(destination: RepositoryDetailScene(repository: repository)) {
           RepositoryRow(repository: repository)
         }
       }.navigationBarTitle(Text("Search"),

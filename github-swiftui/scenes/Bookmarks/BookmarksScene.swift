@@ -12,7 +12,7 @@ struct BookmarksScene : View {
     var body: some View {
       NavigationView {
         List(repositories) { repository in
-          NavigationButton(destination: RepositoryDetailScene(repository: repository)) {
+          NavigationLink(destination: RepositoryDetailScene(repository: repository)) {
             RepositoryRow(repository: repository)
           }
           }.navigationBarTitle(Text("Bookmarks"),
