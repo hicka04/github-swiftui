@@ -9,18 +9,23 @@
 import SwiftUI
 
 struct TabScene : View {
-  
-  @State private var selectedIndex = 0
 
   var body: some View {
-    TabbedView(selection: $selectedIndex) {
+    TabbedView {
       RepositorySearchResultsScene()
-        .tabItemLabel(Text("Search"))
+        .environmentObject(RepositoryModel())
+        .tabItem {
+          Image(systemName: "magnifyingglass")
+          Text("Search")
+        }
         .tag(0)
       BookmarksScene()
-        .tabItemLabel(Text("Bookmarks"))
+        .tabItem {
+          Image(systemName: "bookmark")
+          Text("Bookmarks")
+        }
         .tag(1)
-    }
+    }.edgesIgnoringSafeArea(.top)
   }
 }
 
